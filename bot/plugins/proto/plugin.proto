@@ -1,0 +1,70 @@
+syntax="proto3";
+
+service Plugin{
+    rpc HandleMessage(HandleMessageRequest)returns(HandleMessageResponse){}
+    rpc HandleApplication(HandleApplicationRequest) returns(HandleApplicationResponse){}
+    rpc HandleNotice(HandleNoticeRequest) returns (HandleNoticeResponse){}
+}
+
+enum Type{
+    UnknownChat = 0;
+    PrivateChat = 1;
+    GroupChat = 2;
+    DiscussChat = 3;
+}
+enum SubType{
+    // Private
+    Other = 0;
+    Friend = 1;
+    Group = 2;
+    Discuss = 3;
+    // Group
+    Normal = 4;
+    Anonymous = 5;
+    Notice = 6;
+
+}
+message Sender{
+    int64 id = 1;
+    string nickname = 2;
+    string sex = 3;
+    int32 age = 4;
+}
+
+message HandleMessageRequest{
+    int64 bot = 1;
+    int64 time = 2;
+    int64 message_id = 3;
+    Type type = 4;
+    SubType sub_type = 5;
+    int64 user_id = 6;
+    int64 group_id = 7;
+    int64 discuss_id = 8;
+    string text = 9;
+}
+
+message HandleMessageResponse{
+    string reply = 1;
+    bool at_sender = 2;
+    bool auto_escape = 3;
+}
+
+enum ApplicationType{
+    FriendAdd = 0; //添加我为好友
+    GroupAdd = 1; // 添加我管理的QQ群
+    GroupInvite = 2; // 邀请我加入QQ群
+}
+message HandleApplicationRequest{
+    ApplicationType type = 1;
+    int64 user_id = 2;
+    int64 group_id = 3;
+    string comment = 4;
+    string flag = 5;
+}
+message HandleApplicationResponse{
+    bool approve = 1;
+    string remark = 2;
+    string reason = 3; // 仅在group add时有效
+}
+message HandleNoticeRequest{}
+message HandleNoticeResponse{}

@@ -1,0 +1,118 @@
+syntax="proto3";
+service Bot{
+    rpc Send(SendRequest) returns (SendResponse) {};
+    rpc HandleFriendApplication(HandleFriendApplicationRequest) returns (HandleFriendApplicationResponse){};
+    rpc HandleGroupApplication(HandleGroupApplicationRequest) returns (HandleGroupApplicationResponse) {};
+//    rpc DeleteMessage(DeleteMessageRequest)returns(DeleteMessageResponse){};
+//    rpc Like(LikeRequest)returns(LikeResponse){};
+//    rpc KickChatMember(KickChatMemberRequest)returns(KickChatMemberResponse){};
+//    rpc RestrictChatMember(RestrictChatMemberRequest)returns(RestrictChatMemberResponse){};
+//    rpc RestrictAnonymousChatMember(RestrictAnonymousChatMemberRequest)returns(RestrictAnonymousChatMemberResponse){};
+//    rpc RestrictAllChatMembers(RestrictAllChatMembersRequest)returns(RestrictAllChatMembersResponse){};
+//    rpc PromoteChatMember(PromoteChatMemberRequest)returns(PromoteChatMemberResponse){};
+//    rpc EnableAnonymousChat(EnableAnonymousChatRequest)returns(EnableAnonymousChatResponse){};
+//    rpc SetChatMemberCard(SetChatMemberCardRequest)returns(SetChatMemberCardResponse){};
+//    rpc SetChatMemberTitle(SetChatMemberTitleRequest)returns(SetChatMemberTitleResponse){};
+//    rpc LeaveChat(LeaveChatRequest)returns(LeaveChatResponse){};
+    rpc PluginRegister(PluginRegisterRequest) returns (PluginRegisterResponse) {};
+    rpc PluginUnregister(PluginUnregisterRequest) returns (PluginUnregisterResponse) {};
+}
+message DeleteMessageRequest{
+    int64 message_id = 1;
+}
+message DeleteMessageResponse{}
+message LikeRequest{}
+message LikeResponse{}
+message KickChatMemberRequest{}
+message KickChatMemberResponse{}
+message RestrictChatMemberRequest{}
+message RestrictChatMemberResponse{}
+message RestrictAnonymousChatMemberRequest{}
+message RestrictAnonymousChatMemberResponse{}
+message RestrictAllChatMembersRequest{}
+message RestrictAllChatMembersResponse{}
+message PromoteChatMemberRequest{}
+message PromoteChatMemberResponse{}
+message EnableAnonymousChatRequest{}
+message EnableAnonymousChatResponse{}
+message SetChatMemberCardRequest{}
+message SetChatMemberCardResponse{}
+message SetChatMemberTitleRequest{}
+message SetChatMemberTitleResponse{}
+message LeaveChatRequest{}
+message LeaveChatResponse{}
+
+enum MessageType{
+    Private = 0;
+    Group = 1;
+    Discuss = 2;
+}
+message Message {
+    MessageType type = 1;
+    int64 id = 2;
+    string text = 3;
+}
+message SendRequest{
+    string secret = 1;
+    repeated Message messages = 2;
+}
+message SendResponse{
+    bool status = 1;
+}
+message HandleFriendApplicationRequest{
+    string secret = 1;
+    string flag = 2;
+    bool approve = 3;
+    string remark = 4;
+}
+message HandleFriendApplicationResponse{}
+enum GroupApplicationType{
+    Add = 0;
+    Invite = 1;
+}
+message HandleGroupApplicationRequest{
+    string secret = 1;
+    string flag = 2;
+    GroupApplicationType type = 3;
+    bool approve = 4;
+    string reson = 5;
+}
+message HandleGroupApplicationResponse{
+
+}
+message PluginRegisterRequest{
+    // bot方加密密钥
+    string secret = 1;
+    // plugin名称
+    string name = 2;
+    // plugin host
+    string host = 3;
+    // plugin port
+    int32 port = 4;
+    // 准备注册的notice事件列表
+    repeated string notice_events = 5;
+    // 准备注册的message事件列表
+    repeated string message_events = 6;
+    // 准备注册的application事件列表
+    repeated string application_events = 7;
+}
+message PluginRegisterResponse{
+    bool status = 1;
+}
+
+message PluginUnregisterRequest{
+    // bot方加密密钥
+    string secret = 1;
+    // plugin名称
+    string name = 2;
+    // 准备注销的notice事件列表
+    repeated string notice_events = 3;
+    // 准备注销的message事件列表
+    repeated string message_events = 4;
+    // 准备注销的application事件列表
+    repeated string application_events = 5;
+}
+
+message PluginUnregisterResponse{
+    bool status = 1;
+}

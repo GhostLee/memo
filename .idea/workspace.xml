@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3549fa86-7d53-4eab-b37c-bf6b9aea4760" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="memo" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+        <option value="Go Application" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1ShcP5wUORvVz96Mx5jlej6Rtq5" />
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../qq-bot-api" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot/plugins" />
+      <recent name="$PROJECT_DIR$/bot" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/leosys" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.bot">
+    <configuration name="booker" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="memo" />
+      <working_directory value="$PROJECT_DIR$/leosys" />
+      <envs>
+        <env name="id" value="47e7c236-6a82-4f8b-9eec-122d3ef936e5" />
+        <env name="server" value="127.0.0.1:9922" />
+      </envs>
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/leosys/cmd/booker/booker.go" />
+      <package value="github.com/GhostLee/memo/leosys/cmd/booker" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bot" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="memo" />
+      <working_directory value="$PROJECT_DIR$/bot" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/bot/bot.go" />
+      <package value="github.com/GhostLee/memo/bot" />
+      <directory value="$PROJECT_DIR$/" />
+      <output_directory value="$PROJECT_DIR$/bot" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/GhostLee/memo/bot/experiment" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="memo" />
+      <working_directory value="$PROJECT_DIR$/bot" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/bot/experiment/main.go" />
+      <package value="github.com/GhostLee/memo/bot/experiment" />
+      <directory value="$PROJECT_DIR$/" />
+      <output_directory value="$PROJECT_DIR$/bot/experiment" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMessageQueue in github.com/GhostLee/memo/bot/lib/queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="memo" />
+      <working_directory value="$PROJECT_DIR$/bot/lib/queue" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/GhostLee/memo/bot/lib/queue" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestMessageQueue$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_handle in github.com/GhostLee/memo/leosys/cmd/booker" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="memo" />
+      <working_directory value="$PROJECT_DIR$/leosys/cmd/booker" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/GhostLee/memo/leosys/cmd/booker" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_handle$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.booker" />
+      <item itemvalue="Go Build.bot" />
+      <item itemvalue="Go Build.go build github.com/GhostLee/memo/bot/experiment" />
+      <item itemvalue="Go Test.TestMessageQueue in github.com/GhostLee/memo/bot/lib/queue" />
+      <item itemvalue="Go Test.Test_handle in github.com/GhostLee/memo/leosys/cmd/booker" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.bot" />
+        <item itemvalue="Go Build.booker" />
+        <item itemvalue="Go Test.Test_handle in github.com/GhostLee/memo/leosys/cmd/booker" />
+        <item itemvalue="Go Build.go build github.com/GhostLee/memo/bot/experiment" />
+        <item itemvalue="Go Test.TestMessageQueue in github.com/GhostLee/memo/bot/lib/queue" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>https://goproxy.io,direct</proxy>
+  </component>
+</project>
